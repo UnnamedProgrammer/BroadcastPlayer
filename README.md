@@ -8,7 +8,7 @@ A native macOS app for viewing HDMI capture with GPU upscaling, adjustable image
 
 ![macOS 27 or later](https://img.shields.io/badge/macOS-27%2B-161616?logo=apple&logoColor=white) ![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white) ![Metal and MetalFX](https://img.shields.io/badge/Rendering-Metal%20%2B%20MetalFX-4667DF)
 
-[Get started](#get-started) · [Image quality](#image-quality) · [Audio](#audio) · [Keyboard shortcuts](#keyboard-shortcuts) · [Development](#development)
+[Download](https://github.com/UnnamedProgrammer/BroadcastPlayer/releases/latest) · [Get started](#get-started) · [Image quality](#image-quality) · [Audio](#audio) · [Keyboard shortcuts](#keyboard-shortcuts) · [Development](#development)
 
 </div>
 
@@ -38,13 +38,25 @@ The app is built with SwiftUI, AVFoundation, Metal, and Core Audio. Video proces
 - An **Apple Silicon Mac running macOS 27 or later** for the supported setup.
 - A USB or Thunderbolt capture card that macOS exposes as a video capture device.
 - A console or another HDMI source, connected to the card's HDMI input.
-- **Xcode 27 or later** to build the app from this repository.
+- **Xcode 27 or later** if you want to build from source.
 
 ```text
 Console / HDMI source ── HDMI ──▶ Capture card ── USB / Thunderbolt ──▶ Mac
 ```
 
-### Build and launch
+### Download and install
+
+Get the latest app from **[GitHub Releases](https://github.com/UnnamedProgrammer/BroadcastPlayer/releases/latest)**. Xcode is not required for the downloadable app.
+
+1. Download the **Apple Silicon DMG** and open it.
+2. Drag `BroadcastPlayer.app` into **Applications**, then launch it.
+3. Allow **Camera** and **Microphone** access, then choose your capture device and input format.
+
+A ZIP download is also available. Extract it and move `BroadcastPlayer.app` to Applications. Each release includes SHA-256 checksums for both downloads.
+
+> **First launch:** the current release is ad-hoc signed and is not notarized by Apple. macOS may block it at first. If you trust the downloaded app, follow [Apple's instructions for opening an unnotarized app](https://support.apple.com/en-us/102445): try launching it, then use **System Settings → Privacy & Security → Open Anyway** if that option is offered.
+
+### Build from source
 
 This repository contains the source code. To run it locally:
 
